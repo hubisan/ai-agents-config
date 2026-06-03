@@ -29,51 +29,6 @@ Typical contents include:
 
 Other projects can copy these files without using Git subtrees or submodules.
 
-** Usage in other projects
-
-The contents of this repository can be copied into another project by copying the contents of =.project/= into the target project's local =.project/= directory.
-
-Existing files with the same names will be overwritten. Other files in the target directory will remain untouched.
-
-Example:
-
-#+begin_src bash
-rsync -a path/to/ai-agents-config/.project/ path/to/target-project/.project/
-#+end_src
-
-** Update script in target projects
-
-Target projects can use a small script to fetch the latest files from this repository.
-
-Example:
-
-#+begin_src bash
-#!/usr/bin/env bash
-
-set -e
-
-REPO_ROOT="$(git rev-parse --show-toplevel)"
-cd "$REPO_ROOT"
-
-TMP=".project-update-tmp"
-TARGET=".project"
-REPO_URL="https://github.com/USER/ai-agents-config.git"
-BRANCH="main"
-
-rm -rf "$TMP"
-mkdir -p "$TARGET"
-
-git clone -q --depth=1 --branch "$BRANCH" "$REPO_URL" "$TMP"
-
-rsync -a "$TMP/.project/" "$TARGET/"
-
-rm -rf "$TMP"
-#+end_src
-
-The script only copies files and directories from =.project/= into the target project.
-
-It does not run =git add=, =git commit=, or perform any automatic merge.
-
 ** Contents
 
 *** =.project/agents/AGENTS.md=
@@ -83,3 +38,42 @@ Agent configuration and instructions for AI coding agents.
 *** =.project/tasks/template.org=
 
 Org-mode template for tasks or task descriptions.
+
+** Usage in other projects
+
+The contents of this repository can be copied into another project by copying the contents of =.project/= into the target project's local =.project/= directory.
+
+Existing files with the same names will be overwritten. Other files in the target directory will remain untouched.
+
+#+begin_src bash
+rsync -a path/to/ai-agents-config/.project/ path/to/target-project/.project/
+#+end_src
+
+** Update script in target projects
+
+Target projects can use a small script to fetch the latest files from this repository.
+
+#+begin_src bash
+  #!/usr/bin/env bash
+
+  set -e
+
+  REPO_ROOT="$(git rev-parse --show-toplevel)"
+  cd "$REPO_ROOT"
+
+  TMP=".project-update-tmp"
+  TARGET=".project"
+  REPO_URL="https://github.com/hubisan/ai-agents-config.git"
+  BRANCH="main"
+
+  rm -rf "$TMP"
+  mkdir -p "$TARGET"
+
+  git clone -q --depth=1 --branch "$BRANCH" "$REPO_URL" "$TMP"
+
+  rsync -a "$TMP/.project/" "$TARGET/"
+
+  rm -rf "$TMP"
+
+  git status
+#+end_src
