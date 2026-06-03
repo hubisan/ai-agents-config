@@ -95,3 +95,15 @@ Do not change without explicit instruction: secrets, tokens, `.env` files, produ
 ## When unsure
 
 Do not invent assumptions. Record task-specific uncertainty in the task file. Record only repository-wide uncertainty in [.project/agents/ai-notes.org](./.project/agents/ai-notes.org). Notify the user and ask only if needed.
+
+## Repository Maintenance (User Only)
+
+AGENTS.md and the task template are updated through a Git subtree.
+
+**Critical:** AI agents must not update or synchronize these shared workflow files. This is a manual user task.
+
+If an update is needed, remind the user to run:
+
+```bash
+git subtree pull --prefix=. https://github.com/hubisan/ai-agents-config.git main --squash
+```
