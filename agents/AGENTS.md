@@ -98,12 +98,14 @@ Do not invent assumptions. Record task-specific uncertainty in the task file. Re
 
 ## Repository Maintenance (User Only)
 
-AGENTS.md and the task template are updated through a Git subtree into the `.project/` directory.
+AGENTS.md and the task template are managed via a Git subtree into the `.project/` directory.
 
 **Critical:** AI agents must not update or synchronize these shared workflow files. This is a manual user task.
 
-If an update is needed, remind the user to run:
+If the repository needs to be synchronized, remind the user to run one of the following commands:
 
-```bash
-git subtree pull --prefix=.project https://github.com/hubisan/ai-agents-config.git main --squash
-```
+- **For initial setup in a new project:**
+  `git subtree add --prefix=.project https://github.com/hubisan/ai-agents-config.git main --squash`
+
+- **For subsequent updates:**
+  `git subtree pull --prefix=.project https://github.com/hubisan/ai-agents-config.git main --squash`
