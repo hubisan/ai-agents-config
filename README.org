@@ -1,4 +1,4 @@
-#+TITLE: AI Agents Config
+* AI Agents Config
 
 This repository contains shared configuration files, templates, and agent instructions for AI-assisted coding projects.
 
