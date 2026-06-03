@@ -55,7 +55,7 @@ Common AI errors to avoid:
 1. User marks a task in [../tasks/todo.org](../tasks/todo.org) as `NEXT`.
 2. AI only works on `NEXT` or `CONTINUE` tasks unless explicitly instructed.
 3. For each AI task, AI creates/uses a task file in [../tasks/](../tasks/) based on [../tasks/template.org](../tasks/template.org): `../tasks/YYYY-MM-DD--slug.org`. Remove sections in the template if not relevant. Add other sections if it makes sense. Add the task start date at the top at `#+TASK_STARTED:`, like `[2026-06-03 Mi]`.
-4. AI links the task in [../tasks/todo.org](../tasks/todo.org) to its task file. Example: `[[./2026-05-24--anki-export-fix.org]]`.
+4. AI links the task in [../tasks/todo.org](../tasks/todo.org) to its task file. Example: `[[./2026-05-24--anki-export-fix.org]]` (relative to the todo file).
 5. On `main`, create a focused branch, e.g. `feature/task-name` or `fix/task-name`; otherwise continue on the current branch and report suspicious branch/repo state.
 6. AI reads and follows [./repository.org](./repository.org) for repository-specific instructions.
 7. AI implements the requested task.
@@ -68,7 +68,7 @@ Common AI errors to avoid:
     1. AI sets the task to `DONE`.
     2. AI updates [../../CHANGELOG.org](../../CHANGELOG.org) for notable changes.
     3. AI adds the completion date at the top of the task file at `#+TASK_COMPLETED:`, like `[2026-06-03 Mi]`.
-    4. AI may create [../tasks/archive/](../tasks/archive/) if needed, moves the task file there, and updates the link in [../tasks/todo.org](../tasks/todo.org).
+    4. AI may create [../tasks/archive/](../tasks/archive/) if needed, moves the task file there, and updates the link in [../tasks/todo.org](../tasks/todo.org) to point to the archive subdirectory.
     5. AI must not remove or archive the task entry in [../tasks/todo.org](../tasks/todo.org) unless explicitly instructed.
 14. AI commits only when explicitly asked.
 15. Commits must be focused and have clear messages.
