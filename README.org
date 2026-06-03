@@ -4,7 +4,7 @@ This repository contains shared configuration files, templates, and agent instru
 
 The files are intended to be copied into other projects, especially into their =.project/= directory.
 
-* Structure
+** Structure
 
 #+begin_src text
 .
@@ -16,7 +16,7 @@ The files are intended to be copied into other projects, especially into their =
 └── README.org
 #+end_src
 
-* Purpose
+** Purpose
 
 This repository acts as a central source for reusable AI project files.
 
@@ -29,7 +29,7 @@ Typical contents include:
 
 Other projects can copy these files without using Git subtrees or submodules.
 
-* Usage in other projects
+** Usage in other projects
 
 The contents of this repository can be copied into another project by copying the contents of =.project/= into the target project's local =.project/= directory.
 
@@ -41,7 +41,7 @@ Example:
 rsync -a path/to/ai-agents-config/.project/ path/to/target-project/.project/
 #+end_src
 
-* Update script in target projects
+** Update script in target projects
 
 Target projects can use a small script to fetch the latest files from this repository.
 
@@ -74,12 +74,12 @@ The script only copies files and directories from =.project/= into the target pr
 
 It does not run =git add=, =git commit=, or perform any automatic merge.
 
-* Contents
+** Contents
 
-** =.project/agents/AGENTS.md=
+*** =.project/agents/AGENTS.md=
 
 Agent configuration and instructions for AI coding agents.
 
-** =.project/tasks/template.org=
+*** =.project/tasks/template.org=
 
 Org-mode template for tasks or task descriptions.
