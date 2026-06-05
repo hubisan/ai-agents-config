@@ -1,19 +1,33 @@
+#+STARTUP: showall
+
 * AI Agents Config
 
 This repository contains shared configuration files, templates, and agent instructions for AI-assisted coding projects.
 
 The files are intended to be copied into other projects, especially into their =.project/= directory.
 
+This repository provides two variants:
+
+- =markdown/.project/= for Markdown-based projects
+- =org-mode/.project/= for Org-mode-based projects
+
 ** Structure
 
 #+begin_src text
 .
-├── .project/
-│   ├── agents/
-│   │   └── AGENTS.md
-│   └── tasks/
-│       └── template.org
-└── README.org
+├── README.org
+├── markdown/
+│   └── .project/
+│       ├── agents/
+│       │   └── AGENTS.md
+│       └── tasks/
+│           └── template.md
+└── org-mode/
+    └── .project/
+        ├── agents/
+        │   └── AGENTS.md
+        └── tasks/
+            └── template.org
 #+end_src
 
 ** Purpose
@@ -25,55 +39,38 @@ Typical contents include:
 - agent instructions
 - task templates
 - project conventions
-- reusable =.project/= configuration files
+- reusable =.project/= configuration files for Markdown-based projects
+- reusable =.project/= configuration files for Org-mode-based projects
 
 Other projects can copy these files without using Git subtrees or submodules.
 
 ** Contents
 
-*** =.project/agents/AGENTS.md=
+*** =markdown/.project/agents/AGENTS.md=
 
-Agent configuration and instructions for AI coding agents.
+Agent configuration and instructions for AI coding agents in Markdown-based projects.
 
-*** =.project/tasks/template.org=
+*** =markdown/.project/tasks/template.md=
+
+Markdown template for tasks or task descriptions.
+
+*** =org-mode/.project/agents/AGENTS.md=
+
+Agent configuration and instructions for AI coding agents in Org-mode-based projects.
+
+*** =org-mode/.project/tasks/template.org=
 
 Org-mode template for tasks or task descriptions.
 
-** Usage in other projects
-
-The contents of this repository can be copied into another project by copying the contents of =.project/= into the target project's local =.project/= directory.
-
-Existing files with the same names will be overwritten. Other files in the target directory will remain untouched.
-
-#+begin_src bash
-rsync -a path/to/ai-agents-config/.project/ path/to/target-project/.project/
-#+end_src
-
 ** Update script in target projects
 
-Target projects can use a small script to fetch the latest files from this repository.
+Target projects can use a small script named =update-ai-config-files.sh= to fetch the latest files from this repository.
 
-#+begin_src bash
-  #!/usr/bin/env bash
+The script name is always the same in target projects. The script itself is project-specific and copies the correct variant into the target project's local =.project/= directory.
 
-  set -e
+- Markdown-based projects copy from =markdown/.project/=
+- Org-mode-based projects copy from =org-mode/.project/=
 
-  REPO_ROOT="$(git rev-parse --show-toplevel)"
-  cd "$REPO_ROOT"
+Existing files with the same names will be overwritten. Other files in the target project's =.project/= directory will remain untouched.
 
-  TMP=".project-update-tmp"
-  TARGET=".project"
-  REPO_URL="https://github.com/hubisan/ai-agents-config.git"
-  BRANCH="main"
-
-  rm -rf "$TMP"
-  mkdir -p "$TARGET"
-
-  git clone -q --depth=1 --branch "$BRANCH" "$REPO_URL" "$TMP"
-
-  rsync -a "$TMP/.project/" "$TARGET/"
-
-  rm -rf "$TMP"
-
-  git status
-#+end_src
+No files are staged or committed automatically.
