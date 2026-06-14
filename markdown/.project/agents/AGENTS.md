@@ -1,6 +1,6 @@
 # AI Agent Instructions
 
-Version: 0.4.0
+Version: 0.5.0
 
 AI agents must read this file before changing this repository.
 
