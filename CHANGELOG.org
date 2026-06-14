@@ -7,6 +7,7 @@ This file records completed changes.
 :VISIBILITY: all
 :END:
 
+- =ADDED= Model suitability and cost awareness: AI should notify if model is not suited for the task.
 - =CHANGED= Clarified some instructions.
 - =ADDED= AI task to move the task in todo.md to ~Completed~ after completing the task.
 

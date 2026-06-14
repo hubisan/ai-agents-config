@@ -50,6 +50,14 @@ Common AI errors to avoid:
 - Prefer headings/subheadings for structure.
 - Do not insert manual line breaks in normal prose just for visual wrapping.
 
+## Model suitability and cost awareness
+
+Before starting substantial work, the AI agent should briefly mention if the current model appears either underpowered or unnecessarily powerful for the task.
+
+If a stronger model would likely improve correctness, reasoning, context handling, or modality support, the agent should say so. If a cheaper or faster model would likely be sufficient, the agent should also say so to help reduce cost.
+
+The agent should continue with a best-effort approach unless the limitation would materially affect correctness, safety, or usefulness.
+
 ## Workflow
 
 1. User marks a task in [../tasks/todo.org](../tasks/todo.org) as `NEXT`.
