@@ -1,68 +1,26 @@
 ---
 title: "<Short Task Title>"
-template_version: "0.3.0"
+template_version: "0.4.0"
 task_started: null
 task_completed: null
 ---
 
 # Planning
 
-**Planned on:** 2026-06-14 So 17:28  
-**Plan status:** ready for review
-
 ## Problem summary
-
-...
-
 ## Goals
-
-...
-
 ## Non-goals
-
-...
-
-## Architectural design
-
-...
-
+## Architecture
 ## Execution plan
-
-...
-
-## Risks and assumptions
-
-...
-
+## Risks & assumptions
+## Open questions
 ## Proposed checks
-
-...
 
 # Build
 
-**Build started on:** 2026-06-14 So 17:28  
-**Build status:** in progress
-
-## Implementation summary
-
-...
-
+## Approach
 ## Changed files
-
-...
-
-## Checks
-
-...
-
+## Checks performed
 ## Test results
-
-...
-
 ## Blockers
-
-...
-
 ## Follow-ups
-
-...
