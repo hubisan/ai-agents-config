@@ -1,6 +1,6 @@
 # AI Agent Instructions
 
-Version: 0.10.0
+Version: 0.11.0
 
 Read this file before changing this repository. Repo-specific rules are in [./repository.org](./repository.org).
 
@@ -62,10 +62,8 @@ Read in order before starting: `AGENTS.md` → `../tasks/todo.org` → `./reposi
    - Set the task to `DONE`.
    - Update the task heading in `todo.org` to include the completion date, e. g. `* DONE [YYYY-MM-DD HH:MM] <title>`.
    - Add `#+TASK_COMPLETED: [YYYY-MM-DD Day HH:MM]` near the top of the task file.
-   - Move the full task description/body from the `todo.org` entry into the task file under a `* Original Task` section, if it is not already preserved there.
+   - Move the full task description/body from the `todo.org` entry into the task file under a `* Original Task` section, if it is not already preserved there. In `todo.org`, keep only the completed task heading and the link to the archived task file. Do not keep the full task body in `todo.org`.
    - Move the task file to `../tasks/archive/`.
    - Update the task link in `todo.org` so it points to the archived task file.
-   - Move the completed entry in `todo.org` under `* Completed` as subheading.
-   - In `todo.org`, keep only the completed task heading and the link to the archived task file. Do not keep the full task body in `todo.org`.
 
    **If not approved:** set to `CONTINUE`, address review comments, repeat from step 2.
