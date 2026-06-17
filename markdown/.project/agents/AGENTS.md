@@ -1,6 +1,8 @@
 # AI Agent Instructions
 
-Version: 0.11.0
+Version: 0.12.0
+
+All paths are relative to this file.
 
 Read this file before changing this repository. Repo-specific rules are in [./repository.md](./repository.md).
 
