@@ -7,6 +7,7 @@ This file records completed changes.
 :VISIBILITY: all
 :END:
 
+- =ADDED= It should suggest a commit message.
 - =REMOVED= ai-notes is not needed.
 - =CHANGED= Refactored the file to be more precise and shorter.
 - =ADDED= The the AI to store the plan in the task file, not only have it in the chat.
