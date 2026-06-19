@@ -95,7 +95,7 @@ If approved:
 3. Add `#+TASK_COMPLETED: [YYYY-MM-DD Day HH:MM]` near the top of the task file.
 4. Move the task file to `../tasks/archive/`.
 5. Update the task link in `todo.org`.
-6. Suggest a Conventional Commit message with optional body.
+6. Suggest Conventional Commit message in a copyable code block.
 7. Do not commit unless instructed.
 
 If not approved:

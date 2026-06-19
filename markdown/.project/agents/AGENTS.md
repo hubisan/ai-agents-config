@@ -76,7 +76,6 @@ For status `BUILD` or `NEXT`:
 7. Write `# Build` in the task file, following the task template.
 8. Set the task state in `todo.md` to `REVIEW`.
 9. Notify the user and stop.
-10. Suggest a Conventional Commit message with optional body.
 
 ### 4. CONTINUE Mode
 
@@ -95,7 +94,7 @@ If approved:
 3. Add `task_completed: YYYY-MM-DD Day HH:MM` near the top of the task file.
 4. Move the task file to `../tasks/archive/`.
 5. Update the task link in `todo.md`.
-6. Suggest a Conventional Commit message with optional body.
+6. Suggest Conventional Commit message in a copyable code block.
 7. Do not commit unless instructed.
 
 If not approved:
