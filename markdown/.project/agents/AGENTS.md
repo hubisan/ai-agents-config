@@ -70,8 +70,8 @@ For status `BUILD` or `NEXT`:
 3. Read `./repository.md`.
 4. Implement only the active task scope.
 5. Run relevant tests and linters.
-6. Update docs/README/`../../CHANGELOG.md` only if needed.
-7. Write `# Build` in the task file, following the task template.
+6. Update docs, README, CHANGELOG.md if needed.
+7. Record results under `# Results` in the task file, following the task template.
 8. Set the task state in `todo.md` to `REVIEW`.
 9. Notify the user and stop.
 

@@ -70,8 +70,8 @@ For status `BUILD` or `NEXT`:
 3. Read `./repository.org`.
 4. Implement only the active task scope.
 5. Run relevant tests and linters.
-6. Update docs/README/`../../CHANGELOG.org` only if needed.
-7. Write `* Build` in the task file, following the task template.
+6. Update docs, README, CHANGELOG if needed.
+7. Record results under `* Results` in the task file, following the task template.
 8. Set the task state in `todo.org` to `REVIEW`.
 9. Notify the user and stop.
 10. Suggest a Conventional Commit message with optional body.
