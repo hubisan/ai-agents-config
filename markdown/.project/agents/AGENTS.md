@@ -44,9 +44,7 @@ Tasks use Markdown with Org-style states.
 ### 1. Prepare
 
 1. Work only on `PLAN`, `BUILD`, `NEXT`, or `CONTINUE` tasks.
-2. Create or reuse `../tasks/YYYY-MM-DD--slug.md` from `../tasks/template.md`.
-   Summarize relevant chat input and copy the task entry from `todo.md`
-   under `# Input & Todo Task`; remove inapplicable sections.
+2. Create or reuse `../tasks/YYYY-MM-DD--slug.md` from `../tasks/template.md`. In the task file under `# Input & Todo Task`, summarize relevant chat input and copy the task entry from `todo.md`. Remove inapplicable sections from the task file.
 3. Add `task_started: YYYY-MM-DD Day HH:MM` near the top.
 4. Link the task file below the task heading in `todo.md`.
 5. If on `main`, create a branch `type/description` using `feat`, `fix`, `hotfix`, `refactor`, `perf`, `docs`, `test`, `release`, `ci`, or `chore`; otherwise continue on the current branch.
